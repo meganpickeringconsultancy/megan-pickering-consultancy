@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/megan-pickering-consultancy
+  branch: main
+  base_url: https://meganpickeringconsultancy.com
+  auth_endpoint: api/auth
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "Website Content"
+    files:
+      - name: "site"
+        label: "Homepage Content"
+        file: "content/site.json"
+        fields:
+          - { label: "Hero Subtitle", name: "hero_sub", widget: "text" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Attribution", name: "attribution", widget: "string" }

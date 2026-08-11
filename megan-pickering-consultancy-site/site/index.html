@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Megan Pickering Consultancy — Speech &amp; Language Therapy, Special Needs Consultancy</title>
+<meta name="description" content="Speech and language therapy and special needs consultancy for schools across London and internationally. Direct contract SLT services, literacy, autism support, and self-advocacy work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1C2321;
+    --ink-soft: #3A4340;
+    --paper: #F1ECE1;
+    --paper-raised: #FAF7F0;
+    --plum: #1A5C6B;
+    --plum-deep: #123F49;
+    --ochre: #B9843E;
+    --sage: #74856E;
+    --line: #D9D0BE;
+    --focus: #B9843E;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Karla', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--plum);
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(241, 236, 225, 0.88);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+  }
+  .logo span { color: var(--plum); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    transition: color 0.15s ease;
+  }
+  .nav-links a:hover { color: var(--plum); }
+  .nav-cta {
+    display: inline-block;
+    padding: 9px 18px;
+    background: var(--plum);
+    color: var(--paper-raised) !important;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.15s ease;
+  }
+  .nav-cta:hover { background: var(--plum-deep); }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 84px 32px 56px;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; padding-top: 56px; }
+  }
+  .hero h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    margin-bottom: 22px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--plum);
+  }
+  .hero-sub {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin-bottom: 30px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block;
+    padding: 13px 24px;
+    background: var(--ink);
+    color: var(--paper-raised);
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn-primary:hover { background: var(--plum-deep); transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-block;
+    padding: 13px 22px;
+    border: 1.5px solid var(--ink);
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .btn-secondary:hover { border-color: var(--plum); color: var(--plum); }
+
+  /* Waveform signature element */
+  .waveform-panel {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 28px 24px 22px;
+  }
+  .waveform-panel svg { width: 100%; height: auto; display: block; }
+  .waveform-caption {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .wf-bar {
+    transform-origin: bottom;
+    animation: settle 2.4s cubic-bezier(.36,1.2,.4,1) forwards;
+  }
+  @keyframes settle {
+    0%   { transform: scaleY(var(--from)); }
+    100% { transform: scaleY(var(--to)); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .wf-bar { animation: none; transform: scaleY(var(--to)); }
+  }
+
+  /* ---------- Section scaffolding ---------- */
+  section { padding: 64px 32px; }
+  .section-head { max-width: 640px; margin-bottom: 40px; }
+  .section-head h2 { font-size: clamp(28px, 3.4vw, 36px); margin-top: 10px; }
+  .divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  @media (max-width: 780px) { .services-grid { grid-template-columns: 1fr; } }
+  .service-card {
+    background: var(--paper-raised);
+    padding: 30px 26px;
+  }
+  .service-card .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ochre);
+    margin-bottom: 14px;
+    display: block;
+  }
+  .service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .service-card p { font-size: 15px; color: var(--ink-soft); }
+
+  /* ---------- Contract offer band ---------- */
+  .offer-band {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .offer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 64px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (max-width: 780px) { .offer-inner { grid-template-columns: 1fr; } }
+  .offer-band .eyebrow { color: var(--ochre); }
+  .offer-band h2 { color: var(--paper-raised); font-size: clamp(26px, 3.2vw, 34px); margin-top: 10px; }
+  .offer-band p { color: #CFC9BB; margin-top: 14px; font-size: 16px; }
+  .offer-list { list-style: none; }
+  .offer-list li {
+    padding: 16px 0;
+    border-top: 1px solid rgba(255,255,255,0.14);
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+  }
+  .offer-list li:last-child { border-bottom: 1px solid rgba(255,255,255,0.14); }
+  .offer-list .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ochre);
+    white-space: nowrap;
+  }
+
+  /* ---------- Who I work with ---------- */
+  .who-grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  @media (max-width: 780px) { .who-grid { grid-template-columns: 1fr; } }
+  .who-grid ul { list-style: none; }
+  .who-grid li {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 15.5px;
+    display: flex;
+    gap: 12px;
+  }
+  .who-grid li::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--sage);
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+
+  /* ---------- Credentials ---------- */
+  .cred-strip {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 44px;
+  }
+  .cred-item { max-width: 260px; }
+  .cred-item .eyebrow { display: block; margin-bottom: 6px; }
+  .cred-item p { font-size: 15px; color: var(--ink-soft); }
+
+  /* ---------- Contact ---------- */
+  /* ---------- Testimonials ---------- */
+  .testimonial-grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 860px) { .testimonial-grid { grid-template-columns: 1fr; } }
+  .testimonial-card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial-card .quote-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 44px;
+    color: var(--ochre);
+    line-height: 0.5;
+    margin-bottom: 14px;
+  }
+  .testimonial-card p.quote {
+    font-size: 15px;
+    color: var(--ink-soft);
+    flex-grow: 1;
+    margin-bottom: 18px;
+  }
+  .testimonial-card .attribution {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--plum);
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+  }
+
+  .contact-panel {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 52px 44px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (max-width: 780px) { .contact-panel { grid-template-columns: 1fr; padding: 36px 26px; } }
+  .contact-panel h2 { font-size: 30px; margin-bottom: 14px; }
+  .contact-panel p { color: var(--ink-soft); font-size: 15.5px; }
+  .contact-details { display: flex; flex-direction: column; gap: 16px; }
+  .contact-details a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    border-bottom: 2px solid var(--ochre);
+    padding-bottom: 2px;
+    width: fit-content;
+  }
+  .contact-details span {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 36px 32px 44px;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo"><img src="images/logo-mark.png" alt="" style="height:28px; width:28px; vertical-align:-6px; margin-right:8px;">Megan Pickering <span>Consultancy</span></div>
+    <ul class="nav-links">
+      <li><a href="#schools">Schools</a></li>
+      <li><a href="#individual">Individual Clients</a></li>
+      <li><a href="#expert-witness">Expert Witness</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#about">Credentials</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">Speech &amp; Language Therapy — Special Needs Consultancy</p>
+    <h1 id="hero-heading">Helping every student find their <em>way to be understood.</em></h1>
+    <p class="hero-sub" id="hero-sub">Contracted speech and language therapy for schools, nurseries and colleges. Individualised specialist sessions for private clients. Expert witness reports for tribunal. Training for staff, companies and individuals — all delivered directly, without an agency in between.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Discuss a contract</a>
+      <a href="#schools" class="btn-secondary">See services</a>
+    </div>
+  </div>
+  <div class="waveform-panel" style="padding:0; overflow:hidden;">
+    <img src="images/headshot.jpg" alt="Megan Pickering" style="width:100%; height:100%; object-fit:cover; display:block; aspect-ratio:1/1;">
+    <div class="waveform-caption" style="padding:16px 22px 20px;">
+      <span>Megan Pickering</span>
+      <span>SLT · Special Needs Consultant</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="wrap" style="padding-top:56px; padding-bottom:0;">
+  <p class="eyebrow">What I do</p>
+  <h2 style="font-size:clamp(28px,3.4vw,36px); margin-top:10px; max-width:640px;">Four ways to work with me.</h2>
+</section>
+
+<section id="schools" class="offer-band">
+  <div class="offer-inner">
+    <div>
+      <p class="eyebrow">01 — Schools, Nurseries &amp; Colleges</p>
+      <h2>A direct contract, not an agency placement.</h2>
+      <p>I work with schools, nurseries and colleges on a sessional or day-a-week basis, contracted directly — so you get a consistent, specialist therapist who knows your students, without agency margins or rotating cover. Covers SLT, literacy and phonics, autism support, and self-advocacy work, embedded across the setting.</p>
+    </div>
+    <ul class="offer-list">
+      <li><span class="tag">FLEXIBLE</span> From one day a week to termly blocks, arranged around your timetable</li>
+      <li><span class="tag">DIRECT</span> No agency — a single point of contact from first conversation to contract</li>
+      <li><span class="tag">SPECIALIST</span> HCPC-registered SLT, Special Needs Consultant, and published researcher</li>
+      <li><span class="tag">EMBEDDED</span> Works alongside SENCOs and teaching staff, not in isolation</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="individual">
+  <div class="section-head">
+    <p class="eyebrow">02 — Individual Clients</p>
+    <h2>Highly individualised, specialist sessions.</h2>
+  </div>
+  <div class="who-grid">
+    <p style="font-size:15.5px; color:var(--ink-soft); max-width:52ch;">For families seeking a single specialist who can see the whole picture — rather than separate, disconnected input from different services. Sessions are built entirely around the individual, integrating speech and language, literacy, and autism-related needs into one coherent plan rather than treating each in isolation.</p>
+    <ul>
+      <li>One specialist across speech, language, literacy and autism-related needs</li>
+      <li>Sessions designed around the individual, not a standard programme</li>
+      <li>Available for a wide age range, from early years through to adulthood</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="expert-witness">
+  <div class="section-head">
+    <p class="eyebrow">03 — Expert Witness</p>
+    <h2>Independent reports for tribunal and legal proceedings.</h2>
+  </div>
+  <div class="who-grid">
+    <p style="font-size:15.5px; color:var(--ink-soft); max-width:52ch;">Independent, evidence-based expert witness reports, including for EHCP tribunal proceedings — assessing need, evaluating existing provision, and setting out clear, defensible recommendations grounded in current research and CPR Part 35 duties.</p>
+    <ul>
+      <li>EHCP tribunal reports and evidence</li>
+      <li>Assessment of speech, language and communication need</li>
+      <li>Evidence-graded, research-backed recommendations</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="training">
+  <div class="section-head">
+    <p class="eyebrow">04 — Training</p>
+    <h2>Practical training, for the people around the student.</h2>
+  </div>
+  <div class="who-grid">
+    <p style="font-size:15.5px; color:var(--ink-soft); max-width:52ch;">Training sessions for educational staff, companies, and individuals — including dedicated autism training, so understanding and strategies extend beyond the therapy room into the classroom, workplace, or home.</p>
+    <ul>
+      <li>Staff training for schools, nurseries and colleges</li>
+      <li>Autism awareness and strategy training for companies</li>
+      <li>1:1 training sessions for individuals</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="who">
+  <div class="section-head">
+    <p class="eyebrow">Who I work with</p>
+    <h2>A wide range of ages and needs.</h2>
+  </div>
+  <div class="who-grid">
+    <ul>
+      <li>Students with autism, across the full range of presentation</li>
+      <li>Language difficulties, including developmental language disorder</li>
+      <li>Literacy and reading challenges linked to language development</li>
+      <li>Speech sound and clarity difficulties</li>
+    </ul>
+    <ul>
+      <li>Complex and special educational needs, including EHCP-supported students</li>
+      <li>Students needing support to build self-advocacy skills</li>
+      <li>A range of ages, from early years through to secondary</li>
+      <li>Schools and families across international settings</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="divider">
+
+<hr class="divider">
+
+<section id="testimonials">
+  <div class="section-head">
+    <p class="eyebrow">In their words</p>
+    <h2>What schools and families say.</h2>
+  </div>
+  <div class="testimonial-grid" id="testimonial-grid">
+    <!-- populated automatically from content/site.json -->
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="about">
+  <div class="section-head">
+    <p class="eyebrow">Credentials</p>
+    <h2>Clinical experience, grounded in research.</h2>
+  </div>
+  <div class="cred-strip">
+    <div class="cred-item">
+      <span class="eyebrow">Practice</span>
+      <p>Qualified Speech and Language Therapist, Special Needs Consultant, and teacher.</p>
+    </div>
+    <div class="cred-item">
+      <span class="eyebrow">Research</span>
+      <p>Published researcher, bringing evidence-based practice into everyday school-based intervention.</p>
+    </div>
+    <div class="cred-item">
+      <span class="eyebrow">Reach</span>
+      <p>Experience across multiple international contexts, alongside London and Greater London schools.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="contact">
+  <div class="contact-panel">
+    <div>
+      <h2>Let's talk about your school.</h2>
+      <p>Whether you have a specific need in mind or want to explore what a contracted day a week could look like, get in touch and I'll come back to you directly.</p>
+    </div>
+    <div class="contact-details">
+      <div>
+        <span>Email</span>
+        <a href="mailto:meganpickeringconsultancy@gmail.com" id="contact-email">meganpickeringconsultancy@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Megan Pickering Consultancy. Speech &amp; Language Therapy · Special Needs Consultancy.
+</footer>
+
+<script>
+  fetch('content/site.json?_=' + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      if (data.hero_sub) document.getElementById('hero-sub').textContent = data.hero_sub;
+      if (data.contact_email) {
+        const a = document.getElementById('contact-email');
+        a.textContent = data.contact_email;
+        a.href = 'mailto:' + data.contact_email;
+      }
+      if (Array.isArray(data.testimonials)) {
+        const grid = document.getElementById('testimonial-grid');
+        grid.innerHTML = data.testimonials.map(t => `
+          <div class="testimonial-card">
+            <span class="quote-mark">&ldquo;</span>
+            <p class="quote">${t.quote}</p>
+            <div class="attribution">${t.attribution}</div>
+          </div>
+        `).join('');
+      }
+    })
+    .catch(err => console.warn('Could not load site content:', err));
+</script>
+</body>
+</html>
